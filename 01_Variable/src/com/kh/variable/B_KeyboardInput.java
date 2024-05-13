@@ -85,9 +85,10 @@ public class B_KeyboardInput {
 		
 	// ~님은 ~살이며, 사는곳은 ~이고 키는 ~.~입니다.
 	// sysout + ctrl + space => System.out.println();
-		System.out.println(name + "님은 "+ age + "살이며, 사는곳은 " + address + " 이고, 키는 " + height + "cm 입니다 ");
+	// System.out.println(name + "님은 "+ age + "살이며, 사는곳은 " + address + " 이고, 키는 " + height + "cm 입니다 ");
 		
 		
+	 System.out.printf("%s님은 %d살이며, 사는곳은 %s 이고, 키는 %.1fcm 입니다." , name, age, address, height);
 		
 		
 		
