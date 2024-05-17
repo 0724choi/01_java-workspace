@@ -3,7 +3,7 @@ package com.kh.chap01.controlpractice;
 import java.util.Scanner;
 
 public class ControlPractice {
-	public static void p1() {
+	public void p1() {
 		System.out.printf("1. 입력\n2. 수정\n3. 조회\n4. 삭제\n7. 종료\n");
 		
 		Scanner sc = new Scanner(System.in);
@@ -38,7 +38,7 @@ public class ControlPractice {
 		}
 		System.out.println(result + "메뉴입니다");
 	}
-	public static void p2() {
+	public  void p2() {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("숫자를 한 개 입력하세요(정수만) : ");
@@ -55,7 +55,7 @@ public class ControlPractice {
 		}
 	}
 	
-	public static void p3() {
+	public  void p3() {
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -81,7 +81,7 @@ public class ControlPractice {
 				
 		
 	}
-	public static void p4() {
+	public  void p4() {
 		Scanner sc =new Scanner(System.in);
 		System.out.print("1 ~ 12사이의 정수 입력 : ");
 		int month = sc.nextInt();
@@ -112,7 +112,7 @@ public class ControlPractice {
 		
 	}
 	
-	 public static void p5() {
+	 public  void p5() {
 		 
 		 String id = "myId";
 		 String passwd = "maPassword12";
@@ -135,7 +135,7 @@ public class ControlPractice {
 		}
 
 	 }
-	 public static void p6() {
+	 public  void p6() {
 		 Scanner sc = new Scanner(System.in);
 		 System.out.print("권한을 확인하고자 하는 회원 등급 : ");
 		 String grade = sc.nextLine();
@@ -152,7 +152,7 @@ public class ControlPractice {
 		 
 			 
 		 }
-	 public static void p7(){
+	 public  void p7(){
 		 
 		 Scanner sc = new Scanner(System.in);
 		 System.out.print("키(m)를 입력해주세요 : ");
@@ -178,7 +178,7 @@ public class ControlPractice {
 		 
 		 
 	 }
-	 public static void p8() { // 코드 너무 별로임
+	 public  void p8() { // 코드 너무 별로임
 		 
 		 Scanner sc = new Scanner(System.in);
 		 
@@ -219,7 +219,7 @@ public class ControlPractice {
 		 }
 
 	 }
-	 public static void p9() {
+	 public void p9() {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("중간 고사 점수 : ");
@@ -285,23 +285,23 @@ public class ControlPractice {
 		 int num = sc.nextInt();
 		 System.out.println("선택 : " + num);
 		 if(num == 1) {
-			 ControlPractice.p1();
+			 p1(); // 자신의 클래스안에서 호출시 그냥 찍으면 된다.
 		 }else if(num ==2) {
-			 ControlPractice.p2();
+			 p2();
 		 }else if(num ==3) {
-			 ControlPractice.p3();
+			 p3();
 		}else if(num ==4) {
-			 ControlPractice.p4();
+			 p4();
 		}else if(num ==5) {
-			 ControlPractice.p5();
+			 p5();
 		}else if(num ==6) {
-			 ControlPractice.p6();
+			 p6();
 		}else if(num ==7) {
-			 ControlPractice.p7();
+			 p7();
 		}else if(num ==8) {
-			 ControlPractice.p8();
+			 p8();
 		}else if(num ==9) {
-			 ControlPractice.p9();
+			 p9();
 		}else {
 			System.out.println("번호를 다시 입력해 주세요.");
 			

@@ -15,7 +15,7 @@ public class Run {
 		//  a.p7();
 		// a.p8();
 		// a.p9();
-		 a.p10();
+		//a.p10();
 	
 	}
 

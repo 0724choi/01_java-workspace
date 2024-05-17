@@ -142,7 +142,9 @@ public class A_For {
 		public void method7() {
 			//사용자에게 값을 입력 받아서 1부터 입력받은 수 까지의 합계 출력
 			Scanner sc = new Scanner(System.in);
-			System.out.print("1이상의 정수 : ");
+			
+			while(true) {
+				System.out.print("1이상의 정수 : ");
 			int num = sc.nextInt();
 			
 			if(num>=1) { // 잘 입력했을경우 => 1에서부터 num까지의 수의 합계 출력
@@ -151,11 +153,17 @@ public class A_For {
 					sum += i;
 				}
 				System.out.println("1부터 "+ num + "까지의 합계는 : " + sum + "입니다.");
-			
+				return; // break; 사용시 반복문 빠져나와 다음코드 진행 
+						// return;시 코드반환하면서 코드 종료
+				
 			}else { // 잘못 입력한 경우 => 오류 구문 출력
-				System.out.println("잘못된 숫자입니다.");
+				System.out.println("잘못된 숫자입니다. 다시 입력해주세요");
 			}
 		}
+				
+			}
+			
+			
 		
 		public void method8() {
 			// 1에서부터 어떤 랜덤값(1~10)까지의 총 합계 => 누적합 sum+=i
@@ -185,6 +193,183 @@ public class A_For {
 			
 		}
 		
+		public void method9() {
+			String str = "Hello";
+			
+			// 각 인덱스별 문자를 뽑아서 출력
+			/*
+			 * H   		=> str.charAt(0); 출력
+			 * e   		=> str.charAt(1); 출력
+			 * l   		=> str.charAt(2); 출력
+			 * l   		=> str.charAt(3); 출력
+			 * o   		=> str.charAt(4); 출력
+			 * 
+			 * 
+			 * 0번 인덱스부터 4번 인덱스(마지막)까지 매번 1씩 증가하면서 반복 수행
+			 */
+			for(int i=0;i<5;i++) {
+				System.out.println(str.charAt(i));
+			}
+			
+			
+		}
+		
+		public void method10() {
+			// 사용자에게 문자열 입력 받아서 (str 변수에 대입)
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("문자열 입력 : ");
+			String str = sc.nextLine();
+			
+			// 각 인덱스별 문자를 뽑아서 출력
+			
+			// apple 의 길이 => 5글자
+			// 01234
+			
+			// strawberry => 10글자
+			// 0123456879
+		
+			// kiwi
+			// 0123
+			
+			// 마지막 인덱스는 항상 문자열의 길이 -1 이다!
+			// 추출하고자 하느 인덱스값이 (문자열의 길이 -1)까지 매번 1씩 증가
+			
+			System.out.println("문자열의 길이 : " + str.length());
+			
+			for(int i=0; i<str.length(); i++) {
+				System.out.println(str.charAt(i));
+				
+			}
+			
+		
+		}
+		
+		public void method11() {
+			//구구단 출력하기 2단
+			
+			/*
+			 * 2 x 1 = 2
+			 * 2 x 2 = 4
+			 * 
+			 * ...
+			 * 
+			 * 2 x 9 = 18
+ 			 */
+			
+			for(int i=1; i<10; i++) {
+				// System.out.println(" 2 x " + i + " = " + 2*i);
+				System.out.printf("2 x %d = %d\n",i,2*i);
+				
+			}
+			
+			
+		
+		}
+		public void method12() {
+			// 사용자에게 단을 받아 구구단 출력
+			// int dan;
+			// 2~9사이의 정수를 입력 => 가이드 문구
+			// 다른 숫자를 입력한 경우 => 2~9사이의 숫자를입력해야합니다
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.print("2~9사이의 정수를 입력해 주세요 :");
+			int dan = sc.nextInt();
+			
+			if(dan>=2 && dan<=9) {
+				for(int i=1; i<10; i++) {
+					System.out.printf("%d x %d = %d\n" ,dan,i,dan*i);			
+				}
+			}else{
+				System.out.println("2~9사이의 숫자를 입력해야합니다.");
+			}
+				
+			
+		}
+		public void method13() {
+			// 랜덤한 단을 출력 (2부터 9사이의)
+			
+			int dan = (int)(Math.random()*8)+2; //  + 2(시작수),  * 개수(2,3,4,5,6,7,8,9 =>)8
+			//		  0.0 <= random	<1.0
+			//		  0.0 <=8random <8.0
+			//		  2.0 <=8random+2 <10.0 
+			//	  	  2<=(int)8random+2 <10  => 2~9
+			
+			System.out.println("=== " + dan + "단 ===");
+			
+			for(int i=1; i<10; i++) {
+				System.out.printf("%d x %d = %d\n", dan, i, dan*i);
+			}
+			
+		}
+		
+		// 중첩 for문
+		public void method14() {
+			// 1 2 3 4 5
+			// 1 2 3 4 5
+			// 1 2 3 4 5
+			
+			for(int i =0; i<4; i++) {
+				
+				for(int j = 1; j<=5; j++) {
+					System.out.print(j + " ");
+				}
+				System.out.println(); // 개행 코드
+			}
+			
+		}
+		public void method15() {
+			// ****
+			// ****
+			// ****
+			// ****
+			for(int i =0; i<4; i++) {
+				for(int j =0; j<4; j++) {
+					System.out.print("*");		
+			}
+				System.out.println();
+		}
+	}
+		public void method16() {
+			// 1*** => 1행1열일때 숫자1
+			// *2** => 2행2열일때 숫자2
+			// **3* => 3행3열일때 숫자3
+			// ***4 => 4행4열일때 숫자4
+			
+			for(int i=0; i<4; i++) { // 행 담당
+				for(int j=0; j<4; j++) { // 열 담당
+					
+					if(i==j) {
+						System.out.print(i+1);
+					}else {
+						System.out.print("*");
+					}
+				}
+				System.out.println();
+			}
+		}
+		
+		
+		public void method17() {
+			// 2단부터 9단까지 출력
+			
+			for(int i= 2; i<10; i++) {
+				System.out.printf("\n=== %d단 ===\n",i);
+				for(int j=1; j<10; j++) {
+					System.out.printf("%d x %d = %d\n",i,j,i*j);	
+				}
+			}
+			
+		}
+		
+		
+		public void method18() {
+			for(; ;) { // 조건식에 자리가 생략된 경우 기본으로 true로 인식되어 무한 반복문이 된다
+				System.out.println("안녕");
+				
+			}
+		}
+
 }
 
 
