@@ -141,15 +141,152 @@ public class ArrayPractice {
 			System.out.print("치킨 이름을 입력하세요 : ");
 			String str = sc.nextLine();
 			
-			if(sArr.equals(str)) {
-				System.out.println("굿");
-			}else {
-				System.out.println(sArr);
+			 for (int i = 0; i < sArr.length; i++) {
+
+			if(sArr[i].equals(str)) {
+				 System.out.println(str + " 치킨 배달 가능.");
+				 break;
+
+				 
+			}else if (i == sArr.length - 1) {
+				System.out.println(str + " 치킨은 없는 메뉴입니다.");
+
 			}
 			
 				
+			 }
+		
+		}
+		//주민등록번호 성별자리 이후부터 *로 가리고 출력하세요.
+		// 단, 원본 배열 값은 변경 없이 배열 복사본으로 변경하세요.
+		public void p10() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("주민등록번호(-포함) : ");
+			String rrd = sc.nextLine();
+			
+			char rrdArr[] = new char[rrd.length()];
+			char rrdCopy[] = new char[rrd.length()];
+			
+			for(int i=0; i<rrd.length(); i++) {
+				 rrdArr[i] =rrd.charAt(i);
+			}
+			for(int i=0; i<rrdArr.length;i++) {
+				if(i>7) {
+					rrdCopy[i] = '*';
+				}else {
+				rrdCopy[i]=rrdArr[i];
+				}
+				System.out.print(rrdCopy[i]);
+			}
+				
+		}
+		/*10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+		1~10 사이의 난수를 발생시켜 배열에 초기화한 후 출력하세요. */
+		
+		public void p11() {
+			
+			int nArr[] = new int[10];
+			
+			for(int i=0; i<10; i++) {
+				int random = (int)(Math.random()*10+1);
+				nArr[i] = random;
+				System.out.print(nArr[i]+ " ");
 			}
 			
+			
+		}
 		
+		/*10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+		1~10 사이의 난수를 발생시켜 배열에 초기화 후
+		배열 전체 값과 그 값 중에서 최대값과 최소값을 출력하세요. */
+		
+		public void p12() {
+			int arr[] = new int[10];
+			
+			System.out.println("arr[0] : " + arr[0]);
+			
+			 //int max = arr[0];
+			 //int min = arr[0];
+			
+			for(int i=0; i<10; i++) {
+				arr[i] = (int)(Math.random()*10+1); // 1~10
+				System.out.print(arr[i] + " ");
+			}
+			System.out.println();
+			
+			int max = arr[0];
+			int min = arr[0];
+			
+			for(int i=0; i<arr.length-1; i++) {
+				if(max<arr[i]) {
+					max = arr[i];
+				}
+				if(min>arr[i]) {
+					min = arr[i];
+				}
+				
+			}
+			System.out.println("최대 : " + max);
+			System.out.println("최소 : " + min);
+			
+		}
+		
+		public void p13() {
+			/*10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
+			1~10 사이의 난수를 발생시켜 중복된 값이 없게 배열에 초기화한 후 출력하세요.*/
+			int arr[] = new int[10];
+			
+			for(int i=0; i<10; i++) {
+				arr[i] = (int)(Math.random()*10+1);
+				 for(int j=0; j<i; j++) {
+			            if(arr[i] == arr[j]) {
+			              i--;
+
+						}
+
+					}
+				}
+			  for(int i=0; i<arr.length; i++) {
+		            System.out.print(arr[i] + " ");
+
+		}		  
+	}
+		
+		public void p14() {
+			/*문자열을 입력 받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고
+			문자의 개수와 함께 출력하세요.*/
+			
+			Scanner sc = new Scanner(System.in);
+			int count = 0;
+			System.out.print("문자열 : ");
+			String str = sc.nextLine();
+			char arr[] = new char[str.length()];
+			
+			for(int i=0; i<str.length(); i++) {
+				arr[i] = str.charAt(i);
+				
+				boolean flag = true;
+				
+				for(int j=0; j<i; j++) {
+					if(arr[i]==arr[j]) {
+						flag = false;
+						break;
+					}
+					
+				}
+				if(flag) {
+					if (i == 0) {
+						System.out.print(arr[i]);
+					} else {
+						System.out.print(", " + arr[i]);
+					}
+					count++;
+					
+			}
+			
+		}
+			System.out.println();
+			System.out.println(count);
+}
 }
 
