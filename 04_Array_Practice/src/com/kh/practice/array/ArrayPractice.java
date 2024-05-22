@@ -280,7 +280,6 @@ public class ArrayPractice {
 					} else {
 						System.out.print(", " + arr[i]);
 					}
-					count++;
 					
 			}
 			
@@ -288,5 +287,28 @@ public class ArrayPractice {
 			System.out.println();
 			System.out.println(count);
 }
+		
+		/*
+		 * 사용자가 입력한 배열의 길이만큼의 문자열 배열을 선언 및 할당하고
+			배열의 인덱스에 넣을 값 역시 사용자가 입력하여 초기화 하세요.
+			단, 사용자에게 배열에 값을 더 넣을지 물어보고 몇 개를 더 입력할 건지,
+			늘린 곳에 어떤 데이터를 넣을 것인지 받으세요.
+			사용자가 더 이상 입력하지 않겠다고 하면 배열 전체 값을 출력하세요. */
+			
+		public void p15() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("배열의 크기를 입력하세요 : ");
+			int num = sc.nextInt();
+			sc.nextLine();
+			
+			String origin[] = new String[num];
+			String copy[] = origin; // 얕은복사
+			
+			for(int i=0; i <origin.length; i++) {
+				System.out.printf("%d번째 문자열 : ",i+1);
+				origin[i] = sc.nextLine();	
+				}
+			if()
+		}
 }
 
