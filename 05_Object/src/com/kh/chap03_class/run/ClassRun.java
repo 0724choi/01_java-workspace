@@ -36,7 +36,7 @@ public class ClassRun {
 		
 		
 		// 첫번째 방법 : 기본생성자로 생성 후 setter 메소드 이용해서 값 초기화
-		Product coffee = new Product();
+		/*Product coffee = new Product();
 		
 		coffee.setpName("커피");
 		coffee.setPrice(1000);
@@ -54,7 +54,7 @@ public class ClassRun {
 		
 		
 		// 두번째 방법 : 매개변수 생성자로 생성과 동시에 값 초기화
-		Product p2 = new Product("아이폰",1500000,"애플");
+		// Product p2 = new Product("아이폰",1500000,"애플");
 		System.out.println(p2.getpName());
 		System.out.println(p2.getPrice());
 		System.out.println(p2.getBrand());
@@ -70,6 +70,7 @@ public class ClassRun {
 		System.out.println(p2.info());
 		System.out.println(p2.info());
 		
+		*/
 		
 		
 
@@ -89,6 +90,21 @@ public class ClassRun {
 		System.out.println("상품명 : " +phone.getpName());
 		System.out.println("가격 : " + phone.getPrice()+ "원");
 		System.out.println("브랜드 : " +phone.getBrand());*/
+		
+		
+		Person p5 = new Person(); // 기본생성자를 사용 
+		p5.setName("돌김"); 
+		System.out.println(p5.getName());
+		p5.setAge(24);
+		System.out.println(p5.getAge());
+		
+		
+		Person p3 = new Person("user01","pass01","차은우"); // 생성자를 사용하여 가져오고 싶은 값만 가져옴 나머지는 기본값
+		System.out.println(p3.information());
+		
+		System.out.println();
+		Person p4 = new Person("user02","pass02","장원영",20,'여',"아이폰","jang123@gmail.com");
+		System.out.println(p4.information());
 			
 		}
 		

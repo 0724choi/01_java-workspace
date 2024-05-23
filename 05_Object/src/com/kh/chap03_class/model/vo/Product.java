@@ -1,4 +1,4 @@
-package com.kh.chap03_class.model.vo;
+ package com.kh.chap03_class.model.vo;
 
 public class Product {
 	

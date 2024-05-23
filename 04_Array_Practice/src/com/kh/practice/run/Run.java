@@ -20,8 +20,8 @@ public class Run {
 		// a.p11();
 		//a.p12();
 		// a.p13();
-		a.p14();
-		
+		//a.p14();
+		a.p15();
 		
 		
 		Answer b = new Answer();

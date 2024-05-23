@@ -301,6 +301,7 @@ public class LoopPractice {
 			System.out.println();
 		
 		
+		}
 	}
-}
+	
 }

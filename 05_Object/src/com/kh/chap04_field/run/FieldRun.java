@@ -2,6 +2,7 @@ package com.kh.chap04_field.run;
 
 import com.kh.chap04_field.model.vo.FieldTest1;
 import com.kh.chap04_field.model.vo.FieldTest2;
+import com.kh.chap04_field.model.vo.FieldTest3;
 
 public class FieldRun {
 
@@ -27,6 +28,20 @@ public class FieldRun {
 		
 		// private : 오직 같은 클래스에서만 접근 가능!
 		// System.out.println(f2.pri);
+		
+		
+		
+		//-------------- FiledTest3--------------------
+		
+		System.out.println(FieldTest3.sta);
+		FieldTest3.sta = "ㅇㅇㅇ";
+		System.out.println(FieldTest3.sta);
+		
+		// 절대 변경되지않게 하려면 => 상수필드로 선언 해야함
+		// FieldTest3.STA_FIN = "ㅎㅎㅎ";
+		
+		System.out.println(Math.random()); // static : 기울임
+		
 		
 		
 		
