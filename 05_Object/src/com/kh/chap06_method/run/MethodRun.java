@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.kh.chap06_method.controller.NonStaticMethod;
 import com.kh.chap06_method.controller.OverloadingTest;
+import com.kh.chap06_method.controller.StaticMethod;
 
 public class MethodRun {
 
@@ -52,7 +53,7 @@ public class MethodRun {
 		System.out.println(n.method4(str, index));
 		 */
 	
-		OverloadingTest ot = new OverloadingTest();
+		/*OverloadingTest ot = new OverloadingTest();
 		ot.test();
 		ot.test(10);
 		ot.test(10, "ㅎㅇ");
@@ -63,7 +64,42 @@ public class MethodRun {
 		// 오버로딩의 대표적인 예 => print()문
 		System.out.print(10);
 		System.out.print("하이");
-		System.out.print(0.0);
+		System.out.print(0.0);*/
+		
+		
+		// static 메소드는 별도의 생성없이 사용이 가능하다!
+		StaticMethod.method1();
+		
+		StaticMethod.method2();
+		System.out.println(StaticMethod.method2());
+		
+		
+		StaticMethod.method3("최승균");
+		
+		
+		
+		System.out.println(StaticMethod.method4("apple", "kiwi"));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
