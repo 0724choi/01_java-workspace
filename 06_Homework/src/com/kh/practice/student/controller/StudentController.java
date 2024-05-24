@@ -36,6 +36,7 @@ public class StudentController {
 		int sum = 0;
 		for(int i=0; i<sArr.length; i++) {
 			sum += sArr[i].getScore();
+			
 		}
 		
 		return sum;
