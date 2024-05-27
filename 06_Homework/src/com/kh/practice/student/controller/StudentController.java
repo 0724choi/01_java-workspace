@@ -7,6 +7,8 @@ public class StudentController {
 	
 	// 필드부
 	private Student[] sArr = new Student[5];
+	
+	
 	public static final int CUT_LINE = 60;
 	
 	
