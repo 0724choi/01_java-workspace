@@ -147,13 +147,13 @@ public class Answer {
 
 				for (int j = 0; j < i; j++) {
 
-					if (arr[i] == arr[j]) {
+				if (arr[i] == arr[j]) {
 						flag = false; // 중복값이 있다
-						break;
+						break; // 이거 무슨 용도일까
 					}
 
 				}
-				if (flag == true)
+				if (flag)
 					
 				{ // 중복값이 없다
 					if (i == 0) {

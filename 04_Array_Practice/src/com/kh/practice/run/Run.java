@@ -21,15 +21,15 @@ public class Run {
 		//a.p12();
 		// a.p13();
 		//a.p14();
-		a.p15();
-		
+		//a.p15();
+		//a.p16();
 		
 		Answer b = new Answer();
 		// b.a2();
 		// b.a3();
 		//b.a4();
 		// b.a5();
-		//b.a6();
+		b.a6();
 		// b.a7();
 		// b.a8();
 	}

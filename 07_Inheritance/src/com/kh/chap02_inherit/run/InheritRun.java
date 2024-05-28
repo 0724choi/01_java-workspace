@@ -10,6 +10,10 @@ public class InheritRun /*extends Object*/  {
 	public static void main(String[] args) {
 		
 		
+		
+		
+		
+		
 		Car c = new Car("벤틀리",12.5,"세단",4);
 		
 		Ship s = new Ship("낚시배",3,"어선",1);
