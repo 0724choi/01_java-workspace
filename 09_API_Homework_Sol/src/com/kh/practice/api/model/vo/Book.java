@@ -1,5 +1,6 @@
 package com.kh.practice.api.model.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Book {
@@ -66,7 +67,14 @@ public class Book {
 		this.price = price;
 	}
 	
+	
+	@Override
 	public String toString() {
-		return "Book " + "[title : " + title + ", author : " + author + ", publisher : " + publisher + ", publishDate : " + publishDate + ", price" + price+"]"; 
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 출간");
+		String date = sdf.format(publishDate);
+		
+		
+		return "Book " + "[title : " + title + ", author : " + author + ", publisher : " + publisher + ", publishDate : " + date + ", price" + price+"]"; 
 	}
 }
