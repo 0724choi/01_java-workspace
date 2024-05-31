@@ -36,7 +36,7 @@ public class ObjectArrayRun {
 		// 각 핸드폰의 가격을 전부 더해서 구하고 싶다면?
 		int total = 0;
 		for(int i=0; i<phones.length; i++) {
-			System.out.println(phones[i].information());
+			System.out.println(phones[i]);
 			total += phones[i].getPrice();
 		}
 		

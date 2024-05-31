@@ -40,7 +40,7 @@ public class ArrayForEach {
 		
 		int total = 0;
 		for(Phone p : phones) { // p=phones[0] => p=phones[1] => p=phone[2]
-			System.out.println(p.information());
+			System.out.println(p.toString());
 			total += p.getPrice();
 			
 		}

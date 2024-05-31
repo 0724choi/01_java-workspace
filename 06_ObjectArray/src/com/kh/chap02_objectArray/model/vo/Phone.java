@@ -57,8 +57,9 @@ public class Phone {
 		this.series = series;
 	}
 	
-	public String information() {
-		return name + ", " + brand + ", " + price + ", "+ series;
+	@Override
+	public String toString() {
+		return "Phone [name=" + name + ", brand=" + brand + ", price=" + price + ", series=" + series + "]";
 	}
 	
 	
