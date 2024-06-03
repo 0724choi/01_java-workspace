@@ -3,7 +3,7 @@ package com.kh.library.model.vo;
 public class Team {
 	
 	private String teamName; // 팀명
-	private char gameResult; // 경기결과
+	private String gameResult; // 경기결과
 	private int gatePeople; // 관중수
 	private int teamRank; // 순위
 	private int gameShoot; // 유효숫 숫자
@@ -12,7 +12,7 @@ public class Team {
 	public Team() {}
 
 
-	public Team(String teamName, char gameResult, int gatePeople, int teamRank, int gameShoot) {
+	public Team(String teamName, String gameResult, int gatePeople, int teamRank, int gameShoot) {
 		this.teamName = teamName;
 		this.gameResult = gameResult;
 		this.gatePeople = gatePeople;
@@ -31,12 +31,12 @@ public class Team {
 	}
 
 
-	public char getGameResult() {
+	public String getGameResult() {
 		return gameResult;
 	}
 
 
-	public void setGameResult(char gameResult) {
+	public void setGameResult(String gameResult) {
 		this.gameResult = gameResult;
 	}
 

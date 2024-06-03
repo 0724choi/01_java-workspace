@@ -6,7 +6,7 @@ public class WinTeam extends Team{
 	
 	public WinTeam() {}
 
-	public WinTeam(String teamName, char gameResult, int gatePeople, int teamRank, int gameShoot,int goalPoints,String bestPlayer) {
+	public WinTeam(String teamName, String gameResult, int gatePeople, int teamRank, int gameShoot,int goalPoints,String bestPlayer) {
 		super(teamName,gameResult, gatePeople,gatePeople,gameShoot);
 		this.goalPoints = goalPoints;
 		this.bestPlayer = bestPlayer;

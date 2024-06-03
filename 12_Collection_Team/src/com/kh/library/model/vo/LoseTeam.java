@@ -6,7 +6,7 @@ public class LoseTeam extends Team {
 	
 	public LoseTeam() {}
 
-	public LoseTeam(String teamName, char gameResult, int gatePeople, int teamRank, int gameShoot,int losePoints,String worstPlayer) {
+	public LoseTeam(String teamName, String gameResult, int gatePeople, int teamRank, int gameShoot,int losePoints,String worstPlayer) {
 		super(teamName,gameResult, gatePeople,gatePeople,gameShoot);
 		this.losePoints = losePoints;
 		this.worstPlayer = worstPlayer;
