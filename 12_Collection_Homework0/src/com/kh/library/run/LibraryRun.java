@@ -1,6 +1,7 @@
 
 package com.kh.library.run;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class LibraryRun {
 	public static void main(String[] args) {// 소장책 DB
 		ArrayList<Book> bList = new ArrayList<>();
 
-		/* 생성 DB
+		
 		bList.add(new Book("100", "잃어버린 동규를 찾아서", "김민 박사", "상우 출판사", 8500, "『서경스』, 『르 몽드』 선정 20세기 최고의 책"));
 		bList.add(new Book("101", "종열이의 자서전", "지영이가 옮김", "빛나는 진아출판사", 8500, "영화배우 김채혁이 추천한 젊음에 바치는 영혼의 자서전"));
 		bList.add(new Magazine("102", "김태경 과학동아", "편집부 김희섭 선생", "경원 사이언스", 8500, "광현 유튜브에 소개된 과학만화 잡지", 2024,5));
@@ -22,15 +23,22 @@ public class LibraryRun {
 		bList.add(new Magazine("105", "이주영의 데일리룩", "인플루언서 이준영", "태형이네 책방", 12000, "핫걸 김시연의 샤라웃을 받은 잡지", 2024,10));
 		bList.add(new Book("106", "이한별의 미라클모닝", "정민식 박사", "지운이네 출판사", 6300, "택은이도 2번 성공한 미라클모닝"));
 		bList.add(new Book("107", "윤경이의 백만가지 요리레시피", "서울에서 온 규호", "집밥최선생 최승균 출판사", 6300, "아이돌 황영찬이 적극 추천한 최고의 레시피"));
-		 */
+		
 
 		printBooks(bList);
 
 	}
 
-	public static void printBooks(ArrayList<Book> bs) {
+	public static void printBooks(ArrayList<Book> bs/*bList*/) {
 		// 여기서 메뉴열고 구현 시작
 		BookController bc = new BookController();
+		
+		// 도서추가
+		for(Book b: bs) {
+			bc.addBook(b);
+			System.out.println(b);
+		}
+		
 
 
 		boolean flag = true; // 메뉴 스위치
@@ -66,12 +74,17 @@ public class LibraryRun {
 				
 				if (search == 1) {
 					
+					System.out.println(bc.getAllBook());
+				
+				
 				}
 				else if (search == 2) {
 					
+					bc.onlySearchBook();
 				}
 				else if (search == 3) {
 					
+					System.out.println(bc.onlySearchMagazine());
 				}
 				else if (search == 4) {
 				}
@@ -107,6 +120,7 @@ public class LibraryRun {
 				} else if (bkOrMaga.equals(false)) {
 					System.out.print("출간연도를 입력하세요 : ");
 					int year = sc.nextInt();
+					System.out.println(bc.magazineOfThisYearInfo(year));
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
 					
