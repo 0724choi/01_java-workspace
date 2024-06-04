@@ -30,7 +30,7 @@ public class LoseTeam extends Team {
 
 	@Override
 	public String toString() {
-		return "LoseTeam [losePoints=" + losePoints + ", worstPlayer=" + worstPlayer + "]";
+		return super.toString() + "losePoints=" + losePoints + ", worstPlayer=" + worstPlayer + "]";
 	}	
 	
 	

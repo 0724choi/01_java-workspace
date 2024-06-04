@@ -30,7 +30,7 @@ public class WinTeam extends Team{
 
 	@Override
 	public String toString() {
-		return "WinTeam [goalPoints=" + goalPoints + ", bestPlayer=" + bestPlayer + "]";
+		return super.toString() +"goalPoints=" + goalPoints + ", bestPlayer=" + bestPlayer + "]";
 	}
 	
 	
