@@ -6,8 +6,8 @@ public class WinTeam extends Team{
 	
 	public WinTeam() {}
 
-	public WinTeam(String teamName, String gameResult, int gatePeople, int teamRank, int gameShoot,int goalPoints,String bestPlayer) {
-		super(teamName,gameResult, gatePeople,gatePeople,gameShoot);
+	public WinTeam(String teamName, String gameResult, int gatePeople, int teamRank, int gameShoot, int goalPoints, String bestPlayer) {
+		super(teamName,gameResult, gatePeople, teamRank ,gameShoot);
 		this.goalPoints = goalPoints;
 		this.bestPlayer = bestPlayer;
 	}
@@ -30,7 +30,7 @@ public class WinTeam extends Team{
 
 	@Override
 	public String toString() {
-		return super.toString() +"goalPoints=" + goalPoints + ", bestPlayer=" + bestPlayer + "]";
+		return super.toString() + "goalPoints = " + goalPoints + ", bestPlayer = " + bestPlayer;
 	}
 	
 	

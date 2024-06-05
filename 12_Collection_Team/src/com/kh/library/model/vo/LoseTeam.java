@@ -7,7 +7,7 @@ public class LoseTeam extends Team {
 	public LoseTeam() {}
 
 	public LoseTeam(String teamName, String gameResult, int gatePeople, int teamRank, int gameShoot,int losePoints,String worstPlayer) {
-		super(teamName,gameResult, gatePeople,gatePeople,gameShoot);
+		super(teamName, gameResult, gatePeople, teamRank, gameShoot);
 		this.losePoints = losePoints;
 		this.worstPlayer = worstPlayer;
 	}
@@ -30,7 +30,7 @@ public class LoseTeam extends Team {
 
 	@Override
 	public String toString() {
-		return super.toString() + "losePoints=" + losePoints + ", worstPlayer=" + worstPlayer + "]";
+		return super.toString() + ", losePoints = " + losePoints + ", worstPlayer = " + worstPlayer;
 	}	
 	
 	

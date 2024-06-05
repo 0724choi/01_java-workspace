@@ -3,6 +3,7 @@ package com.kh.library.controller;
 import java.util.ArrayList;
 
 import com.kh.library.model.vo.Team;
+import com.kh.library.model.vo.WinTeam;
 
 public interface TeamManager  {
 	
@@ -21,7 +22,7 @@ public interface TeamManager  {
 	//무승부팀조회 (상속말고 스트링으로 찾아야함)
 	ArrayList<Team>searchDrawTeam();
 	// 팀랭킹조회
-	ArrayList<Team>searchRankTeam(int teamRank);
+	ArrayList<Team> searchRankTeam(int teamRank);
 	// 팀찾기
 	ArrayList<Team>findTeam(String teamName);
 	
@@ -31,22 +32,22 @@ public interface TeamManager  {
 	// 팀추가하기 0번으로 
 	
 	// 팀삭제하기
-	ArrayList<Team>removeTeam(String team);
+	int removeTeam(String team);
 	
 	
 	
 	// 3 선수수정하기
 	// 최고선수 수정
-	ArrayList<Team>editBestPlayer(String bestPlayer);
+	int editBestPlayer(String teamName, String upMom);
 	// 최악선수 수정
-	ArrayList<Team>editWorstPlayer(String worstPlayer);
+	int editWorstPlayer(String teamName, String upWorst);
 	
 	// 4 경기확인
 	//최고선수 확인
-	ArrayList<Team>findBestPlayer(String bestPlayer);
+	String findBestPlayer(String bestPlayer);
 	
 	//최악선수 확인
-	ArrayList<Team>findWorstPlayer(String worstPlayer);
+	String findWorstPlayer(String worstPlayer);
 	
 	
 	// 관중수보기
@@ -62,6 +63,8 @@ public interface TeamManager  {
 	int getTotalLoseGP();
 	//패배팀평균관중수
 	int getAvgLoseGP();
+
+
 
 	
 	

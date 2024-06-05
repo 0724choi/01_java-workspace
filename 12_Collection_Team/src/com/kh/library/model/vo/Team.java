@@ -73,9 +73,11 @@ public class Team {
 
 	@Override
 	public String toString() {
-		return "Team [teamName=" + teamName + ", gameResult=" + gameResult + ", gatePeople=" + gatePeople
-				+ ", teamRank=" + teamRank + ", gameShoot=" + gameShoot + "]";
-	}	
+		return "teamName = " + teamName + ", gameResult = " + gameResult + ", gatePeople = " + gatePeople
+				+ ", teamRank = " + teamRank + ", gameShoot = " + gameShoot;
+	}
+
+
 	
 	
 }
