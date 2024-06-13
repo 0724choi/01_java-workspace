@@ -1,5 +1,10 @@
 package com.kh.variable;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class D_Cast {
 	
 	/*
@@ -146,4 +151,31 @@ public class D_Cast {
 		
 		
 	}
+	
+	public void fs() {
+		
+		FileOutputStream fout = null;
+		
+		try {
+			fout = new FileOutputStream("a.txt",true);
+			
+			fout.write('b');
+			fout.write(123);
+			
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				fout.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	
 }

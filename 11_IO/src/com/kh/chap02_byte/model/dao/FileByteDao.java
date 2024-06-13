@@ -34,7 +34,7 @@ public class FileByteDao {
 		
 		try {
 			// 1. FileOutputStream 객체 생성 => 해당 파일과의 연결통로가 만들어짐
-			 fout = new FileOutputStream("a_byte.txt");// 없으면 새로 만들어주고 통로연결 / 있으면 통로 연결 
+			 fout = new FileOutputStream("a_byte.txt"/*,true*/);// 없으면 새로 만들어주고 통로연결 / 있으면 통로 연결 
 			
 			/*
 			 * true 미작성시 => 해당 파일이 존재할 경우 기존의 데이터를 덮어 쓰워진다 (기본값:false)
@@ -58,6 +58,7 @@ public class FileByteDao {
 			
 			
 			// fout.close(); // 위에서 write() 메소드 IOException 발생했을경우 => catch 블럭 실행 후 빠져나갈거임 (반납하는 코드 실행안됨!!)
+			
 			
 		
 		
