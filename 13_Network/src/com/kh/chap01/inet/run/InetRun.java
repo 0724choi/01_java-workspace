@@ -23,6 +23,8 @@ public class InetRun {
 		 */
 		
 		// InetAddress : 네트워크 정보 (ip주소관련)를 확인할 수 있는 클래스
+		
+	
 		try {
 			InetAddress localHost = InetAddress.getLocalHost();
 			System.out.println(localHost); // 내pc명 / 내 IP주소
