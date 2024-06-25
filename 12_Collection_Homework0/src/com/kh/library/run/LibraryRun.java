@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.kh.library.controller.BookController;
+import com.kh.library.controller.BookManager;
 import com.kh.library.model.vo.Book;
 import com.kh.library.model.vo.Magazine;
 
@@ -146,6 +147,7 @@ public class LibraryRun {
 					System.out.print("bNo을 입력하세요 : ");
 					bNo = sc.nextLine();
 					sc.nextLine();
+					if()
 				} else if (search == 2) { // 책 제목으로 책 찾기
 					System.out.print("책 제목을 입력하세요 : ");
 					sc.nextLine();
